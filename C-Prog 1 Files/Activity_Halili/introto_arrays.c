@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define N 10
 
 int main ()
 {
@@ -21,14 +22,17 @@ int main ()
     int number[5] = {5, 10, 15, 20, 25};
     printf("%d\n", number[0]);
         //reminder: that the first number always start with 0, so the 5 there is 0 for index
-
-    int a[10], i;
-    for (i = 0; i < 10; i++){
+        // never exceed to the number of elements
+        
+        // we used macro (e.g. N) to represent the value of the index
+        // to use that, we write "#define N 10" in the upper
+    int a[N], i;
+    for (i = 0; i < N; i++){
         printf("Enter the nuput for index %d: ", i);
         scanf("%d", &a[i]);
     }
     printf("\nArray elements are as follows:\n");
-    for (i = 0; i < 10; i++){
+    for (i = 0; i < N; i++){
         printf("%d\t", a[i]);
     }
 
