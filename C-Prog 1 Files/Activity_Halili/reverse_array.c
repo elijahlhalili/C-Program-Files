@@ -3,11 +3,26 @@
 int main ()
 {
 
-    int numbers[9] = {34, 56, 54, 32, 67, 89, 90, 32, 21}, i;
-    for (i = 8; i >= 0; i--){
-        printf("%d\t", numbers[i]);
+
+    int num[50], b, i;
+
+    printf("How many integers do you want:\n");
+    scanf("%d", &b);
+
+    printf("Enter %d integers:\n", b);
+    for (i = 0; i < b; i++){
+        scanf("%d", &num[i]);
     }
 
+    printf("Original order of integers: ");
+    for (i = 0; i < b; i++){
+        printf("%d\t", num[i]);
+    }
+
+    printf("\nReverse order of integers: ");
+    for (i = b - 1; i >= 0; i--){
+        printf("%d\t", num[i]);
+    }
 
     return 0;
 }
