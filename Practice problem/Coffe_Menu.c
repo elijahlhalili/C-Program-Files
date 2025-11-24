@@ -50,7 +50,7 @@ int main ()
                 printf("\t\t\t\t      MODE OF PAYMENT");
                 c+=51;
             }
-            else if (r == rows - 2 && c == columns - 99){
+            else if (r == rows - 2 && c == columns - 9){
                 printf("\t\t[1] - Cash (10%% discount)\t[2] - Credit Card (5%% discount)");
                 c+=77;
             }
