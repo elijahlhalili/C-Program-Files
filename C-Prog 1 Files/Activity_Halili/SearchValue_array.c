@@ -4,6 +4,7 @@ int main ()
 {
 
     int num[100], a, b, c;
+    int found = 0;
 
     printf("Input number of integers: ");
     scanf("%d", &a);
@@ -16,14 +17,14 @@ int main ()
     printf("Input a number to search: ");
     scanf("%d", &c);
     
-    for (b = 0; b < a; ++b){
+    for (b = 0; b < a; b++){
         if (c == num[b]){
-            printf("%d is in index %d", num[b], c);
+            printf("%d is in index %d", c, b);
+            found = 1;
         }
-        else{
-            printf("%d is not found!", c);
-            break;
-        }
+    }
+    if (!found){
+        printf("%d is NOT found in the array.\n", c);
     }
 
 
